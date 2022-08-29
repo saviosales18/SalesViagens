@@ -1,0 +1,557 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400;1,500;1,700&display=swap');
+
+/*RESPONSIVIDADE*/
+
+/* Landscape phone to portrait tablet */
+
+@media (max-width: 767px) {}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+    body {
+        margin-bottom: 55px;
+    }
+    header nav .menu {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+
+        z-index: 99;
+
+        background: var(--Han-Purple);
+        height: 55px;
+        color: white;
+        font-weight: bold;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    header nav .logo {
+        width: 100%;
+        text-align: center;
+    }
+    .contatos {
+        padding: 60px 0;
+    }
+    .contatos .card-contatos {
+        position: static;
+    }
+}
+
+/* Portrait tablet to landscape and desktop 
+@media (min-width: 768px) and (max-width: 979px){
+}*/
+
+ /*Large Desktop 
+@media (min-width: 1200px) {
+}*/
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --Oxford-Blue: #030027;
+    --Han-Purple: #3026FC;
+    --Celest: #C5FFFD;
+    --Mongo-tengo: #F27F3D;
+    --Dark-Salmon: #EF946C;
+    --Antique-Brass: #DC9E82;
+}
+
+body {
+    margin: 0;
+    font-family: 'Work Sans', sem serifa;
+   /* background: linear-gradient(to bottom, white 30%, var(--Mongo-tengo) 100%);*/
+   /* width: 100vw; */
+}
+
+.FixoNoTopo{
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+header {
+    height: calc(100vh - 150px);
+    background: no-repeat center/cover url("img/header-img.jpg");
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    background-image: linear-gradient(to bottom right, orange 0%, var(--Mongo-tengo) 70%);
+   /* box-shadow: 0 1px 5px hsla(0, 0%, 0%, 0.1);*/
+}
+
+/*header nav #logo-img {
+    width: 65px;
+    height: 45px;
+
+}*/
+
+header nav .logo:link {
+    font-weight: 600;
+    font-size: 1.1em;
+    color: black;
+    text-decoration: none;
+    margin-left: 50px;
+    transition: all .3s;
+}
+
+header nav .logo:visited {
+    color: var(--Oxford-Blue);
+}
+
+header nav .logo:hover {
+    color: white;
+    transform: scale(1.1);
+}
+
+header nav .logo:active {
+    color: lightgray;
+    transform: scale(1);
+}
+
+header nav .menu {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    font-family: 'Work Sans', sem serifa;
+    font-size: 1.1em;
+    
+}
+
+header nav .menu .btn-menu:link {
+    text-decoration: none;
+    color: black;
+    transition: all .3s;
+}
+
+header nav .menu .btn-menu:visited {
+    color: var(--Oxford-Blue);
+}
+
+header nav .menu .btn-menu:hover {
+    color: white;
+    transform: scale(1.2);
+}
+
+header nav .menu .btn-menu:active {
+    color: lightgray;
+    transform: scale(1.1);
+}
+
+header nav .menu .btn-menu li {
+    margin: 0 50px 0 0;
+}
+
+.header-content {
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+    position: relative;
+    top: 140px;
+}
+
+.header-content h1 {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: 5px;
+    font-size: 5.3em;
+    font-weight: 600;
+    font-style: italic;
+    color: white;
+    text-shadow: 0 0 5px hsla(0, 0%, 0%, 0.3);
+    
+}
+
+.header-content ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-weight: 600;
+    position: relative;
+}
+
+.header-content p {
+    font-size: 1.15em;
+    margin: 0;
+    position: relative;
+    top: 20px;
+    color: white;
+    text-shadow: 0 0 5px hsla(0, 0%, 0%, 0.5);
+}
+
+header .header-content .btn-saiba-mais {
+    padding: 11px 20px;
+    border-radius: 15px;
+    border: 0;
+    position: relative;
+    top: 40px;
+    background: var(--Han-Purple);
+    box-shadow: 0 5px 5px hsla(0, 0%, 0%, 0.2);
+    color: white;
+    font-family: 'Work Sans', sem serifa;
+    font-size: 1em;
+    font-weight: 600;
+    transition: all .3s;
+}
+
+header .header-content .btn-saiba-mais:hover {
+    background-color:white;
+    color: black;
+    transform: scale(1.1);
+    box-shadow: 0 5px 5px hsla(0, 0%, 0%, 0.4);
+    cursor: pointer;
+}
+
+header .header-content .btn-saiba-mais:active {
+    background: rgb(201, 201, 201);
+    transform: scale(1);
+    box-shadow: 0 5px 5px hsla(0, 0%, 0%, 0.2);
+}
+
+.pacotes {
+    padding: 15px;
+    background-image: linear-gradient(to bottom, rgb(210, 210, 210), rgb(245, 250, 250), rgb(220, 220, 220));
+}
+
+.pacotes .pacotes-title {
+    font-size: 2em;
+    width: 100%;
+    margin: 40px auto 0 auto;
+    text-align: center;
+    text-shadow: 0 3px 5px hsla(0, 0%, 0%, 0.2);
+}
+
+.pacotes .cards-pacotes {
+    display: flex;
+    margin: 50px auto;
+    max-width: 1400px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.pacotes .large-card {
+    height: 350px;
+    width: 530px;
+    margin: 15px;
+    border-radius: 20px 0px;
+    background-color: white;
+    position: relative;
+    box-shadow: 0 3px 5px hsla(0, 0%, 0%, 0.1);
+    transition: all .5s;
+}
+
+.pacotes .large-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 3px 5px hsla(0, 0%, 0%, 0.4);
+}
+
+.pacotes .large-card-content h2 {
+    font-size: 1em;
+    margin-bottom: 0;
+    margin-top: 15px;
+}
+
+.pacotes .large-card .large-card-tag-top {
+    position: absolute;
+    background-color: var(--Han-Purple);
+    border-radius: 10px 10px 10px 10px;
+    right: 160px;
+    top: 70px;
+    padding: 2px 5px;
+    box-shadow: 0 0 5px hsla(0, 0%, 0%, 0.1);
+    z-index: 99;
+}
+
+.pacotes .large-card .large-card-tag-bottom {
+    position: absolute;
+    background-color: var(--Mongo-tengo);
+    border-radius: 10px 10px 10px 10px;
+    right: 145px;
+    bottom: 120px;
+    padding: 5px 10px;
+    box-shadow: 0 0 5px hsla(0, 0%, 0%, 0.1);
+    z-index: 99;
+}
+
+.pacotes .large-card .large-card-tag p {
+    margin: 0;
+    color: white;
+    font-weight: 600;
+    font-size: 0.8em;
+}
+
+.pacotes .large-card-image {
+    height: 350px;
+    width: 280px;
+    border-radius: 20px 0 0 0;
+    object-fit: cover;
+}
+
+.pacotes .large-card-content {
+    padding: 0 15px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 340px;
+}
+
+.pacotes .large-card-content ul {
+    position: relative;
+    top: 50px;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+}
+
+.pacotes .large-card-content ul li{
+    font-size: 0.6em;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    margin: 3px 0;
+    color: gray; 
+}
+
+.pacotes .large-card-content li svg {
+    height: 16px;
+    width: 18px;
+    margin-right: 10px;
+}
+
+
+.pacotes .large-card-content p {
+    font-size: .7em;
+    margin: 120px 0 0 0;
+    text-align: justify;
+    color: gray;
+}
+
+.pacotes .card {
+    height: 350px;
+    width: 250px;
+    margin: 15px;
+    border-radius: 20px 0px;
+    background-color: white;
+    position: relative;
+    box-shadow: 0 3px 5px hsla(0, 0%, 0%, 0.1);
+    transition: all .5s;
+}
+
+.pacotes .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 3px 5px hsla(0, 0%, 0%, 0.4);
+}
+
+.pacotes .card .card-tag-top {
+    position: absolute;
+    background-color: var(--Han-Purple);
+    border-radius: 10px 0 0 10px;
+    right: 0;
+    top: 15px;
+    padding: 2px 5px;
+    box-shadow: 0 0 5px hsla(0, 0%, 0%, 0.1);
+}
+
+.pacotes .card .card-tag-bottom {
+    position: absolute;
+    background-color: var(--Mongo-tengo);
+    border-radius: 0 10px 10px 0;
+    left: 0;
+    top: 160px;
+    padding: 5px 10px;
+    box-shadow: 0 0 5px hsla(0, 0%, 0%, 0.1);
+}
+
+.pacotes .card .card-tag p {
+    margin: 0;
+    color: white;
+    font-weight: 600;
+    font-size: 0.8em;
+}
+
+.pacotes .card-image {
+    height: 200px;
+    width: 250px;
+    border-radius: 20px 0 0 0;
+    object-fit: cover;
+}
+
+.pacotes .card-content {
+    padding: 0 15px;
+}
+
+.pacotes .card-content ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+}
+
+.pacotes .card-content ul li{
+    font-size: 0.6em;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    margin: 3px 0;
+    color: gray; 
+}
+
+.pacotes .card-content li svg {
+    height: 16px;
+    width: 18px;
+    margin-right: 10px;
+}
+
+.pacotes .card-content h2 {
+    font-size: 1em;
+    margin-bottom: 0;
+}
+
+.servicos {
+    padding: 15px;
+    background-image: linear-gradient(to top right, var(--Mongo-tengo) 40%, orange 100%);
+    height: 600px;
+}
+
+.servicos .servicos-title {
+    font-size: 2em;
+    text-align: center;
+    margin: 40px auto 0 auto;
+    color: white;
+    text-shadow: 0 3px 5px hsla(0, 0%, 0%, 0.2);
+}
+
+.servicos .cards-servicos {
+    display: flex;
+    max-width: 950px;
+    justify-content: space-around;
+    margin: 50px auto 100px auto;
+    flex-wrap: wrap;
+}
+
+.servicos .card {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 15px;
+}
+
+.servicos .card svg {
+    height: 50px;
+    width: 50px;
+    margin: 40px;
+    stroke: white;
+    transition: all .3s;
+}
+
+.servicos .card svg:hover {
+    stroke: var(--Han-Purple);
+    transform: scale(1.2);
+
+}
+
+.servicos .card h3 {
+    font-weight: 600;
+    color: white;
+}
+
+.servicos .card p {
+    font-size: .8em;
+    text-align: justify;
+    color: white;
+}
+
+.servicos .card .card-content {
+    text-align: center;
+    height: 180px;
+}
+
+.servicos .card .btn-saiba-mais {
+    padding: 8px 15px;
+    border-radius: 15px;
+    border: 0;
+    background: var(--Han-Purple);
+    box-shadow: 0 5px 5px hsla(0, 0%, 0%, 0.2);
+    color: white;
+    font-family: 'Work Sans', sem serifa;
+    font-size: 1em;
+    font-weight: 600;
+    transition: all .3s;
+}
+
+.servicos .card .btn-saiba-mais:hover {
+    background-color:white;
+    color: black;
+    transform: scale(1.1);
+    box-shadow: 0 5px 5px hsla(0, 0%, 0%, 0.4);
+    cursor: pointer;
+}
+
+.servicos .card .btn-saiba-mais:active {
+    background: rgb(201, 201, 201);
+    transform: scale(1);
+    box-shadow: 0 5px 5px hsla(0, 0%, 0%, 0.2);
+}
+
+.contatos {
+    padding: 100px 20%;
+    background-image: linear-gradient(to bottom right, var(--Han-Purple) 0%, rgb(14, 0, 214) 100%);
+    position: relative;
+    height: 600px;
+}
+
+.contatos .card-contatos {
+    width: 300px;
+    height: 250px;
+    position: absolute;
+    background-color: white;
+    border-radius: 15px;
+    z-index: 99;
+    top: calc(50% - 120px);
+    left: calc(25% - 200px);
+    box-shadow: 0 5px 5px hsla(0, 0%, 0%, 0.2);
+}
+
+.card-contatos .contatos-title {
+    text-align: center;
+    
+}
+
+.card-contatos ul {
+    font-size: .8em;
+    list-style: none;
+    
+}
+
+.card-contatos ul svg {
+    color: #F27F3D;
+    
+}
+
+/* Set the size of the div element that contains the map */
+#map {
+    margin: 0;
+    height: 400px;
+    width: 100%;
+}
+
+.footer {
+    height: 600px;
+    padding: 100px 20%;
+    background-image: linear-gradient(to bottom, rgb(210, 210, 210), rgb(245, 250, 250), rgb(220, 220, 220));
+}
