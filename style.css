@@ -422,7 +422,7 @@ header .header-content .btn-saiba-mais:active {
 .servicos {
     padding: 15px;
     background-image: linear-gradient(to top right, var(--Mongo-tengo) 40%, orange 100%);
-    height: 600px;
+    height: 700px;
 }
 
 .servicos .servicos-title {
@@ -461,7 +461,6 @@ header .header-content .btn-saiba-mais:active {
 .servicos .card svg:hover {
     stroke: var(--Han-Purple);
     transform: scale(1.2);
-
 }
 
 .servicos .card h3 {
@@ -511,7 +510,7 @@ header .header-content .btn-saiba-mais:active {
     padding: 100px 20%;
     background-image: linear-gradient(to bottom right, var(--Han-Purple) 0%, rgb(14, 0, 214) 100%);
     position: relative;
-    height: 600px;
+    height: 700px;
 }
 
 .contatos .card-contatos {
@@ -528,18 +527,15 @@ header .header-content .btn-saiba-mais:active {
 
 .card-contatos .contatos-title {
     text-align: center;
-    
 }
 
 .card-contatos ul {
     font-size: .8em;
     list-style: none;
-    
 }
 
 .card-contatos ul svg {
     color: #F27F3D;
-    
 }
 
 /* Set the size of the div element that contains the map */
