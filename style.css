@@ -52,6 +52,8 @@
 }*/
 
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -83,6 +85,8 @@ header {
 }
 
 header nav {
+    height: 40px;
+    padding-top: 15px;
     display: flex;
     justify-content: space-between;
     position: relative;
@@ -163,8 +167,8 @@ header nav .menu .btn-menu li {
     margin: 0;
     padding: 0;
     position: relative;
-    top: 5px;
-    font-size: 5.3em;
+    top: 0px;
+    font-size: 5.4em;
     font-weight: 600;
     font-style: italic;
     color: white;
