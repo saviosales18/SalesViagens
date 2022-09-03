@@ -80,17 +80,18 @@ body {
 }
 
 header {
-    height: calc(100vh - 150px);
-    background: no-repeat center/cover url("img/header-img.jpg");
+    height: calc(100vh - 100px);
+    background: no-repeat center/cover url("img/montfuji.jpg");
 }
 
 header nav {
-    height: 40px;
+    height: 60px;
     padding-top: 15px;
     display: flex;
     justify-content: space-between;
     position: relative;
    /* box-shadow: 0 1px 5px hsla(0, 0%, 0%, 0.1);*/
+   backdrop-filter: blur(2px);
 }
 
 /*header nav #logo-img {
@@ -168,10 +169,10 @@ header nav .menu .btn-menu li {
     padding: 0;
     position: relative;
     top: 0px;
-    font-size: 5.4em;
+    font-size: 5.2em;
     font-weight: 600;
     font-style: italic;
-    color: white;
+    color: rgb(0, 0, 0);
     text-shadow: 0 0 5px hsla(0, 0%, 0%, 0.3);
     
 }
@@ -188,17 +189,17 @@ header nav .menu .btn-menu li {
     font-size: 1.15em;
     margin: 0;
     position: relative;
-    top: 20px;
-    color: white;
+    top: 5px;
+    color: rgb(0, 0, 0);
     text-shadow: 0 0 5px hsla(0, 0%, 0%, 0.5);
 }
 
 header .header-content .btn-saiba-mais {
-    padding: 11px 20px;
+    padding: 10px 20px;
     border-radius: 15px;
     border: 0;
     position: relative;
-    top: 40px;
+    top: 30px;
     background: var(--Han-Purple);
     box-shadow: 0 5px 5px hsla(0, 0%, 0%, 0.2);
     color: white;
@@ -211,7 +212,7 @@ header .header-content .btn-saiba-mais {
 header .header-content .btn-saiba-mais:hover {
     background-color:white;
     color: black;
-    transform: scale(1.1);
+    transform: scale(1.05);
     box-shadow: 0 5px 5px hsla(0, 0%, 0%, 0.4);
     cursor: pointer;
 }
