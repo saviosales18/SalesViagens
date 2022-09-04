@@ -13,6 +13,9 @@ function fixarMenuNoTopo(){
     }
 }
 
+const header = document.querySelector('nav')
+
+
 // Initialize and add the map
 function initMap() {
     // The location of Uluru

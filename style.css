@@ -89,8 +89,7 @@ header nav {
     padding-top: 15px;
     display: flex;
     justify-content: space-between;
-    position: relative;
-   /* box-shadow: 0 1px 5px hsla(0, 0%, 0%, 0.1);*/
+    box-shadow: 0 1px 5px hsla(0, 0%, 0%, 0.1);
    backdrop-filter: blur(1px);
 }
 
