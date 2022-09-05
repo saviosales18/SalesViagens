@@ -88,8 +88,8 @@ header nav {
     position: fixed;
     z-index: 99;
     justify-content: space-between;
-    box-shadow: 0 1px 0 hsla(0, 0%, 0%, 0.1);
-    backdrop-filter: blur(10px);
+
+    backdrop-filter: blur(7px);
 }
 
 header div {
@@ -97,20 +97,20 @@ header div {
 }
 
 header nav #logo-img {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     position: relative;
     top: 5px;
-    left: 20px;
+    left: 10px;
 }
 
 header nav .logo {
     font-weight: 600;
-    font-size: 1.3em;
+    font-size: 1em;
     color: black;
     position: relative;
-    top: -35px;
-    left: 80px;
+    top: -25px;
+    left: 50px;
 }
 
 header nav .menu {
@@ -121,6 +121,7 @@ header nav .menu {
     top: 20px;
     font-family: 'Work Sans', sem serifa;
     font-size: 1.1em;
+    margin: 0 50px 0 0;
 }
 
 header nav .menu .btn-menu:link {
