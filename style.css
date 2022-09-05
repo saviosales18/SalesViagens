@@ -4,7 +4,6 @@
 /*RESPONSIVIDADE*/
 
 /* Landscape phone to portrait tablet */
-
 @media (max-width: 767px) {}
 
 /* Landscape phones and down */
@@ -69,8 +68,6 @@
 body {
     margin: 0;
     font-family: 'Work Sans', sem serifa;
-   /* background: linear-gradient(to bottom, white 30%, var(--Mongo-tengo) 100%);*/
-   /* width: 100vw; */
 }
 
 .FixoNoTopo{
@@ -85,50 +82,45 @@ header {
 }
 
 header nav {
+    width: 100%;
     height: 60px;
-    padding-top: 15px;
     display: flex;
+    position: fixed;
+    z-index: 99;
     justify-content: space-between;
-    box-shadow: 0 1px 5px hsla(0, 0%, 0%, 0.1);
-   backdrop-filter: blur(1px);
+    box-shadow: 0 1px 0 hsla(0, 0%, 0%, 0.1);
+    backdrop-filter: blur(10px);
 }
 
-/*header nav #logo-img {
-    width: 65px;
-    height: 45px;
+header div {
+    list-style: none;
+}
 
-}*/
+header nav #logo-img {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    top: 5px;
+    left: 20px;
+}
 
-header nav .logo:link {
+header nav .logo {
     font-weight: 600;
-    font-size: 1.1em;
+    font-size: 1.3em;
     color: black;
-    text-decoration: none;
-    margin-left: 50px;
-    transition: all .3s;
-}
-
-header nav .logo:visited {
-    color: var(--Oxford-Blue);
-}
-
-header nav .logo:hover {
-    color: white;
-    transform: scale(1.1);
-}
-
-header nav .logo:active {
-    color: lightgray;
-    transform: scale(1);
+    position: relative;
+    top: -35px;
+    left: 80px;
 }
 
 header nav .menu {
     list-style: none;
     display: flex;
-    padding: 0;
+    max-height: 0;
+    position: relative;
+    top: 20px;
     font-family: 'Work Sans', sem serifa;
     font-size: 1.1em;
-    
 }
 
 header nav .menu .btn-menu:link {
@@ -164,15 +156,13 @@ header nav .menu .btn-menu li {
 }
 
 .header-content h1 {
-    margin: 0;
-    padding: 0;
     position: relative;
-    top: 0px;
+    bottom: 5px;
     font-size: 5.2em;
     font-weight: 600;
     font-style: italic;
     color: rgb(0, 0, 0);
-    text-shadow: 0 0 5px hsla(0, 0%, 0%, 0.3);
+    text-shadow: 0 0 5px hsla(0, 0%, 0%, 0.2);
     
 }
 
@@ -185,12 +175,18 @@ header nav .menu .btn-menu li {
 }
 
 .header-content p {
-    font-size: 1.15em;
+    font-size: 0.8em;
     text-align: justify;
-    margin: 0;
+    padding: 10px 20px;
+    margin: 0 150px;
+    position: relative;
+    top: 60px;
     color: rgb(0, 0, 0);
-    text-shadow: 0 0 5px hsla(0, 0%, 0%, 0.5);
-    backdrop-filter: blur(1px);
+    border-radius: 7px;
+    text-shadow: 0 0 3px hsla(0, 0%, 0%, 0.2);
+    background-color: rgba(255, 255, 255, 0.199);
+    box-shadow: 0 4px 4px hsla(0, 0%, 0%, 0.1);
+
 }
 
 header .header-content .btn-saiba-mais {
@@ -198,13 +194,13 @@ header .header-content .btn-saiba-mais {
     border-radius: 15px;
     border: 0;
     position: relative;
-    top: 30px;
+    top: 80px;
     background: var(--Han-Purple);
     box-shadow: 0 5px 5px hsla(0, 0%, 0%, 0.2);
     color: white;
     font-family: 'Work Sans', sem serifa;
-    font-size: 1em;
-    font-weight: 800;
+    font-size: 1.2em;
+    font-weight: 600;
     transition: all .3s;
 }
 
