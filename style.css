@@ -79,6 +79,8 @@ body {
 header {
     height: calc(100vh - 200px);
     background: no-repeat center/cover url("img/montfuji.jpg");
+    padding: 0;
+    margin: 0;
 }
 
 header nav {
@@ -148,48 +150,32 @@ header nav .menu .btn-menu li {
     margin: 0 50px 0 0;
 }
 
-.header-content {
-    max-width: 600px;
-    margin: auto;
+header .titulo {
+    position: relative;
+    padding-top: 200px;
     text-align: center;
-    position: relative;
-    top: 140px;
-}
-
-.header-content h1 {
-    position: relative;
-    Top: 90px;
-    font-size: 5.5em;
+    font-size: 5.4em;
     font-weight: 600;
     font-style: italic;
     color: rgb(0, 0, 0);
     text-shadow: 0 0 5px hsla(0, 0%, 0%, 0.2);
-    
 }
 
-.header-content ul {
+header .subtitulo {
+    position: relative;
+    text-align: center;
+    justify-content: justify;
     margin: 0;
-    padding: 0;
-    list-style: none;
-    font-weight: 600;
-    position: relative;
-}
-
-.header-content p {
+    width: 100px;
+    max-height: 400px;
     font-size: 1em;
-    text-align: justify;
-    padding: 10px 20px;
-    margin: 0 140px;
-    position: relative;
-    top: 110px;
-    color: rgb(0, 0, 0);
     border-radius: 7px;
+    color: rgb(0, 0, 0);
     background-color: rgba(255, 255, 255, 0.075);
     box-shadow: 0 4px 4px hsla(0, 0%, 0%, 0.1);
-
 }
 
-header .header-content .btn-saiba-mais {
+header .btn-saiba-mais {
     padding: 10px 20px;
     border-radius: 15px;
     border: 0;
@@ -204,7 +190,7 @@ header .header-content .btn-saiba-mais {
     transition: all .3s;
 }
 
-header .header-content .btn-saiba-mais:hover {
+header .btn-saiba-mais:hover {
     background-color:white;
     color: black;
     transform: scale(1.05);
@@ -212,7 +198,7 @@ header .header-content .btn-saiba-mais:hover {
     cursor: pointer;
 }
 
-header .header-content .btn-saiba-mais:active {
+header .btn-saiba-mais:active {
     background: rgb(201, 201, 201);
     transform: scale(1);
     box-shadow: 0 5px 5px hsla(0, 0%, 0%, 0.2);
