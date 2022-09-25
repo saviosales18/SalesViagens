@@ -52,6 +52,7 @@
 
 * {
     margin: 0;
+    border: 0;
     padding: 0;
     box-sizing: border-box;
 }
@@ -67,7 +68,7 @@
 
 body {
     margin: 0;
-    font-family: 'Work Sans', sem serifa;
+    font-family: 'Work Sans', sans-serif;
 }
 
 .FixoNoTopo{
@@ -121,7 +122,7 @@ header nav .menu {
     max-height: 0;
     position: relative;
     top: 20px;
-    font-family: 'Work Sans', sem serifa;
+    font-family: 'Work Sans', sans-serif;
     font-size: 1.1em;
     margin: 0 50px 0 0;
 }
@@ -184,7 +185,7 @@ header .btn-saiba-mais {
     background: #73261f;
     box-shadow: 0 5px 5px hsla(0, 0%, 0%, 0.2);
     color: white;
-    font-family: 'Work Sans', sem serifa;
+    font-family: 'Work Sans', sans-serif;
     font-size: 1.4em;
     font-weight: 600;
     transition: all .3s;
@@ -472,7 +473,7 @@ header .btn-saiba-mais:active {
     background: var(--Han-Purple);
     box-shadow: 0 5px 5px hsla(0, 0%, 0%, 0.2);
     color: white;
-    font-family: 'Work Sans', sem serifa;
+    font-family: 'Work Sans', sans-serif;
     font-size: 1em;
     font-weight: 600;
     transition: all .3s;
