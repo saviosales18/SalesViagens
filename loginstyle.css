@@ -13,82 +13,162 @@
     --Oxford-Blue: #030027;
     --Han-Purple: #3026FC;
     --Celest: #C5FFFD;
-    --Mongo-tengo: #F27F3D;
+    --Mongo-tengo: #f27f3d;
     --Dark-Salmon: #EF946C;
     --Antique-Brass: #DC9E82;
 }
 
-/*body {
-    background: linear-gradient(45deg, var(--Oxford-Blue), var(--Han-Purple));
-    background-repeat: no-repeat;
-    min-height: 100vh;
-    min-width: 100vh;
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body * {
+    box-sizing: border-box;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
     display: flex;
-    align-items: center;
     justify-content: center;
-}*/
+    align-items: center;
+    background: var(--Oxford-Blue);
+}
 
-header nav {
+.left-login {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-login > h1 {
+    font-size: 3vw;
+    color: var(--Mongo-tengo);
+}
+
+.left-login-img {
+    width: 35vw;
+    transform: scalex(-1);
+}
+
+.right-login {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-login {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 35px;
+    background: var(--Han-Purple);
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px #00000056;
+}
+
+.card-login > h1 {
+    color: var(--Celest);
+    font-weight: 600;
+    margin: 0;
+}
+
+.textfield {
     width: 100%;
-    height: 60px;
     display: flex;
-    position: fixed;
-    z-index: 99;
-    justify-content: space-between;
-    background: linear-gradient(45deg, var(--Oxford-Blue), var(--Han-Purple));
-    list-style: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px 0;
 }
 
-header nav #logo-img {
-    width: 40px;
-    height: 40px;
-    position: relative;
-    top: 5px;
-    left: 10px;
-}
-
-header nav .logo {
-    font-weight: 600;
-    font-size: 1em;
+.textfield > input {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background:#eefffe;
     color: black;
-    position: relative;
-    top: -25px;
-    left: 50px;
+    font-size: 12pt;
+    box-shadow: 0px 10px 40px #00000056;
+    outline: none;
+    box-sizing: border-box;
 }
 
-header nav .menu {
-    list-style: none;
-    display: flex;
-    max-height: 0;
-    position: relative;
-    top: 20px;
+.textfield > label {
+    color: var(--Celest);
+    margin-bottom: 10px;
+}
+
+.textfield > input::placeholder {
+    color: #00000070;
+}
+
+.btn-login {
+    width: 100%;
+    padding: 16px 0px;
+    border-radius: 15px;
+    border: none;
+    margin: 25px;
+    outline: none;
+    background: var(--Mongo-tengo);
+    box-shadow: 0 5px 5px hsla(0, 0%, 0%, 0.2);
+    color: white;
     font-family: 'Work Sans', sans-serif;
-    font-size: 1.1em;
-    margin: 0 50px 0 0;
-}
-
-main.container {
-    background: white;
-    max-width: 350px;
-    min-height: 40vh;
-    padding: 2rem;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
-}
-
-main h1 {
+    font-size: 1.4em;
     font-weight: 600;
-    margin-bottom: 2rem;
-    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all .3s;
 }
 
-main h1::before {
-    content: "";
-    position: absolute;
-    height: 4px;
-    width: 25px;
-    bottom: 3px;
-    left: 0;
-    border-radius: 8px;
-    background: linear-gradient(45deg, var(--Oxford-Blue), var(--Han-Purple));
+.btn-login:hover {
+    background-color: var(--Dark-Salmon);
+    color: black;
+    transition: 0,3s;
+    box-shadow: 0 5px 5px hsla(0, 0%, 0%, 0.4);
+    cursor: pointer;
+}
+
+.btn-login:active {
+    background: rgb(201, 201, 201);
+    transform: scale(0.9);
+    box-shadow: 0 5px 5px hsla(0, 0%, 0%, 0.2);
+}
+
+@media only screen and (max-width: 950px) {
+    .card-login {
+        width: 85%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    main {
+        flex-direction: column;
+    }
+    .left-login > h1 {
+        display: none;
+    }
+    .left-login {
+        width: 100%;
+        height: auto;
+    }
+    .right-login {
+        width: 100%;
+        height: auto;
+    }
+    .left-login-img {
+        width: 60vw;
+    }
+    .card-login {
+        
+    }
 }
