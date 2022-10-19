@@ -33,7 +33,8 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: var(--Oxford-Blue);
+    background: rgb(0, 0, 0);
+    background: linear-gradient(190deg, #3026fc 0%, #120b8f 20%, #030029 60%);
 }
 
 .left-login {
