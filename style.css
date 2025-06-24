@@ -115,11 +115,10 @@ header .titulos .titulo {
     font-style: italic;
     font-weight: 600;
 }
-header .titulos .subtitulo {
-    
-}
 header .titulos .btn-saiba-mais {
-    
+    margin-top: 20px;
+    padding: 10px 20px;
+    border-radius: 15px;
     background: #73261f;
     box-shadow: 0 5px 5px hsla(0, 0%, 0%, 0.2);
     color: white;

@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SalesViagens</title>
     <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?callback=initMap&v=weekly" defer></script>
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/card-pacote.js" defer></script>
+    <script src="scripts/packges.js" defer></script>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header>
         <nav>
@@ -16,26 +22,38 @@
                 <p class="logo">Sales Viagens</p>
             </div>
             <ul class="menu">
-                <a href="#" class="btn-menu"><li>Home</li></a>
-                <a href="#pacotes" class="btn-menu"><li>Pacotes</li></a>
-                <a href="#servicos" class="btn-menu"><li>Serviços</li></a>
-                <a href="#contatos" class="btn-menu"><li>Contatos</li></a>
-                <a href="login.html" class="btn-menu"><li>Login</li></a>
+                <a href="#" class="btn-menu">
+                    <li>Home</li>
+                </a>
+                <a href="#pacotes" class="btn-menu">
+                    <li>Pacotes</li>
+                </a>
+                <a href="#servicos" class="btn-menu">
+                    <li>Serviços</li>
+                </a>
+                <a href="#contatos" class="btn-menu">
+                    <li>Contatos</li>
+                </a>
+                <a href="login.html" class="btn-menu">
+                    <li>Login</li>
+                </a>
                 <a href="#" class="btn-menu"><i data-feather="shopping-cart"></i></a>
             </ul>
         </nav>
-            <div class="titulos">
-                <div class="titulo">
-                    <h1>Monte Fuji</h1>
-                </div>
-                <div class="subtitulo">
-                    <p>Você sabia que o monte Fuji é a mais alta montanha da ilha de Honshu e de todo o arquipélago japonês?</p>
-                </div>
-                <a href=""><button class="btn-saiba-mais">Saiba mais</button></a>
+        <div class="titulos">
+            <div class="titulo">
+                <h1>Monte Fuji</h1>
             </div>
+            <div class="subtitulo">
+                <p>Você sabia que o monte Fuji é a mais alta montanha da ilha de Honshu e de todo o arquipélago japonês?
+                </p>
+            </div>
+            <a href=""><button class="btn-saiba-mais">Saiba mais</button></a>
+        </div>
     </header>
-    
+
     <section class="pacotes" id="pacotes">
+        
         <h1 class="pacotes-title">Conheça nossos pacotes!</h1>
         <div class="cards-pacotes">
             <div class="large-card">
@@ -45,7 +63,9 @@
                 <div class="large-card-tag large-card-tag-bottom">
                     <p>R$ 1500,00</p>
                 </div>
-                <img class="large-card-image" src="https://images.unsplash.com/photo-1514214246283-d427a95c5d2f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=780&q=80" alt="Miami EUA">
+                <img class="large-card-image"
+                    src="https://images.unsplash.com/photo-1514214246283-d427a95c5d2f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=780&q=80"
+                    alt="Miami EUA">
                 <div class="large-card-content">
                     <h2>Pacotes 5 noites em Miami EUA hotel Premium</h2>
                     <ul>
@@ -53,10 +73,12 @@
                         <li><i data-feather="wifi"></i>Wi-Fi</li>
                         <li><i data-feather="smile"></i>Pet friendly</li>
                     </ul>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo nesciunt sapiente suscipit cumque quis maiores sed impedit architecto voluptatem possimus consectetur, numquam unde earum temporibus, quos corrupti. Maxime, enim distinctio.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo nesciunt sapiente suscipit
+                        cumque quis maiores sed impedit architecto voluptatem possimus consectetur, numquam unde earum
+                        temporibus, quos corrupti. Maxime, enim distinctio.</p>
                 </div>
             </div>
-            
+
             <div class="card">
                 <div class="card-tag card-tag-top">
                     <p>Promoção</p>
@@ -64,7 +86,9 @@
                 <div class="card-tag card-tag-bottom">
                     <p>R$ 1890,00</p>
                 </div>
-                <img class="card-image" src="https://images.unsplash.com/photo-1614722860207-909e0e8dfd99?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80" alt="Fernando de Noronha BR">
+                <img class="card-image"
+                    src="https://images.unsplash.com/photo-1614722860207-909e0e8dfd99?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80"
+                    alt="Fernando de Noronha BR">
                 <div class="card-content">
                     <h2>Pacote 3 dias em Fernando de Noronha hotel Premium</h2>
                     <ul>
@@ -82,7 +106,9 @@
                 <div class="card-tag card-tag-bottom">
                     <p>R$ 1890,00</p>
                 </div>
-                <img class="card-image" src="https://images.unsplash.com/photo-1614722860207-909e0e8dfd99?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80" alt="Fernando de Noronha BR">
+                <img class="card-image"
+                    src="https://images.unsplash.com/photo-1614722860207-909e0e8dfd99?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80"
+                    alt="Fernando de Noronha BR">
                 <div class="card-content">
                     <h2>Pacote 3 dias em Fernando de Noronha hotel Premium</h2>
                     <ul>
@@ -100,7 +126,9 @@
                 <div class="card-tag card-tag-bottom">
                     <p>R$ 1890,00</p>
                 </div>
-                <img class="card-image" src="https://images.unsplash.com/photo-1614722860207-909e0e8dfd99?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80" alt="Fernando de Noronha BR">
+                <img class="card-image"
+                    src="https://images.unsplash.com/photo-1614722860207-909e0e8dfd99?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80"
+                    alt="Fernando de Noronha BR">
                 <div class="card-content">
                     <h2>Pacote 3 dias em Fernando de Noronha hotel Premium</h2>
                     <ul>
@@ -115,7 +143,9 @@
                 <div class="card-tag card-tag-bottom">
                     <p>R$ 2000,00</p>
                 </div>
-                <img class="card-image" src="https://images.unsplash.com/photo-1615633761174-2013785e6950?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" alt="Grécia">
+                <img class="card-image"
+                    src="https://images.unsplash.com/photo-1615633761174-2013785e6950?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+                    alt="Grécia">
                 <div class="card-content">
                     <h2>Pacotes 3 dias na Grécia hotel Premium</h2>
                     <ul>
@@ -130,7 +160,9 @@
                 <div class="card-tag card-tag-bottom">
                     <p>R$ 1890,00</p>
                 </div>
-                <img class="card-image" src="https://images.unsplash.com/photo-1614722860207-909e0e8dfd99?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80" alt="Fernando de Noronha BR">
+                <img class="card-image"
+                    src="https://images.unsplash.com/photo-1614722860207-909e0e8dfd99?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80"
+                    alt="Fernando de Noronha BR">
                 <div class="card-content">
                     <h2>Pacote 3 dias em Fernando de Noronha hotel Premium</h2>
                     <ul>
@@ -145,7 +177,9 @@
                 <div class="card-tag card-tag-bottom">
                     <p>R$ 1890,00</p>
                 </div>
-                <img class="card-image" src="https://images.unsplash.com/photo-1614722860207-909e0e8dfd99?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80" alt="Fernando de Noronha BR">
+                <img class="card-image"
+                    src="https://images.unsplash.com/photo-1614722860207-909e0e8dfd99?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80"
+                    alt="Fernando de Noronha BR">
                 <div class="card-content">
                     <h2>Pacote 3 dias em Fernando de Noronha hotel Premium</h2>
                     <ul>
@@ -160,7 +194,9 @@
                 <div class="card-tag card-tag-bottom">
                     <p>R$ 1890,00</p>
                 </div>
-                <img class="card-image" src="https://images.unsplash.com/photo-1614722860207-909e0e8dfd99?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80" alt="Fernando de Noronha BR">
+                <img class="card-image"
+                    src="https://images.unsplash.com/photo-1614722860207-909e0e8dfd99?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80"
+                    alt="Fernando de Noronha BR">
                 <div class="card-content">
                     <h2>Pacote 3 dias em Fernando de Noronha hotel Premium</h2>
                     <ul>
@@ -175,7 +211,9 @@
                 <div class="card-tag card-tag-bottom">
                     <p>R$ 1890,00</p>
                 </div>
-                <img class="card-image" src="https://images.unsplash.com/photo-1614722860207-909e0e8dfd99?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80" alt="Fernando de Noronha BR">
+                <img class="card-image"
+                    src="https://images.unsplash.com/photo-1614722860207-909e0e8dfd99?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80"
+                    alt="Fernando de Noronha BR">
                 <div class="card-content">
                     <h2>Pacote 3 dias em Fernando de Noronha hotel Premium</h2>
                     <ul>
@@ -185,6 +223,12 @@
                     </ul>
                 </div>
             </div>
+
+            <card-pacote tag="Promoção"
+            img="https://images.unsplash.com/photo-1514214246283-d427a95c5d2f?auto=format&fit=crop&w=780&q=80"
+            alt="Miami EUA" titulo="Pacotes 5 noites em Miami EUA hotel Premium" beneficio1="Café da manhã incluso"
+            beneficio2="Wi-Fi" beneficio3="Pet friendly" preco="R$ 1500,00">
+            </card-pacote>
 
         </div>
     </section>
@@ -197,7 +241,8 @@
                 <i data-feather="map"></i>
                 <div class="card-content">
                     <h3>Tours guiados</h3>
-                    <p>Os tours guiados são passeios realizados com auxilio de um guia, que além de dar informações sobre o local, vai nos conduzir durante o trajeto.</p>
+                    <p>Os tours guiados são passeios realizados com auxilio de um guia, que além de dar informações
+                        sobre o local, vai nos conduzir durante o trajeto.</p>
                 </div>
                 <a href="tours.html"><button class="btn-saiba-mais">Saiba mais</button></a>
             </div>
@@ -206,7 +251,8 @@
                 <i data-feather="camera"></i>
                 <div class="card-content">
                     <h3>Fotografia profissional</h3>
-                    <p>Nossos fotógrafos estão acostumados a registrar os melhores momentos das viagens para que você aproveite a paisagem sem se preocupar.</p>
+                    <p>Nossos fotógrafos estão acostumados a registrar os melhores momentos das viagens para que você
+                        aproveite a paisagem sem se preocupar.</p>
                 </div>
                 <a href="fototeca.html"><button class="btn-saiba-mais">Saiba mais</button></a>
             </div>
@@ -215,7 +261,8 @@
                 <i data-feather="navigation"></i>
                 <div class="card-content">
                     <h3>Aluguel de veículo</h3>
-                    <p>Para os clientes que preferem explorar o ambiente sozinhos e curtem a liberdade, oferecemos o serviço de aliguel de veículos com preços super em conta.</p>
+                    <p>Para os clientes que preferem explorar o ambiente sozinhos e curtem a liberdade, oferecemos o
+                        serviço de aliguel de veículos com preços super em conta.</p>
                 </div>
                 <a href="aluguel.html"><button class="btn-saiba-mais">Saiba mais</button></a>
             </div>
@@ -256,11 +303,10 @@
         </div>
     </footer>
 
-    <script src="main.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?callback=initMap&v=weekly"
-    defer></script>
+
     <script>
         feather.replace()
     </script>
 </body>
+
 </html>
