@@ -1,43 +1,37 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SalesViagens</title>
+    <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/feather-icons"></script>
     <script src="https://maps.googleapis.com/maps/api/js?callback=initMap&v=weekly" defer></script>
     <script src="scripts/main.js" defer></script>
-    <script src="scripts/card-pacote.js" defer></script>
-    <script src="scripts/packges.js" defer></script>
-    <link rel="stylesheet" href="style.css">
+    <script type="module" src="scripts/card-pacote.js"></script>
+    <script src="scripts/global.js" defer></script>
+    <script src="scripts/menumobile.js" defer></script>
 </head>
-
 <body>
     <header>
         <nav>
-            <div>
+            <div class="logo-container">
                 <img src="img/logo-img.png" alt="Logo" id="logo-img">
                 <p class="logo">Sales Viagens</p>
             </div>
+            <button class="hamburger" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <ul class="menu">
-                <a href="#" class="btn-menu">
-                    <li>Home</li>
-                </a>
-                <a href="#pacotes" class="btn-menu">
-                    <li>Pacotes</li>
-                </a>
-                <a href="#servicos" class="btn-menu">
-                    <li>Serviços</li>
-                </a>
-                <a href="#contatos" class="btn-menu">
-                    <li>Contatos</li>
-                </a>
-                <a href="login.html" class="btn-menu">
-                    <li>Login</li>
-                </a>
-                <a href="#" class="btn-menu"><i data-feather="shopping-cart"></i></a>
+                <li><a href="#" class="btn-menu">Home</a></li>
+                <li><a href="#pacotes" class="btn-menu">Pacotes</a></li>
+                <li><a href="#servicos" class="btn-menu">Serviços</a></li>
+                <li><a href="#contatos" class="btn-menu">Contatos</a></li>
+                <li><a href="login.html" class="btn-menu">Login</a></li>
+                <li><a href="#" class="btn-menu"><i data-feather="shopping-cart"></i></a></li>
             </ul>
         </nav>
         <div class="titulos">
@@ -45,243 +39,126 @@
                 <h1>Monte Fuji</h1>
             </div>
             <div class="subtitulo">
-                <p>Você sabia que o monte Fuji é a mais alta montanha da ilha de Honshu e de todo o arquipélago japonês?
-                </p>
+                <p>Você sabia que o monte Fuji é a mais alta montanha da ilha de Honshu e de todo o arquipélago japonês?</p>
             </div>
-            <a href=""><button class="btn-saiba-mais">Saiba mais</button></a>
+            <a href="#"><button class="btn-saiba-mais">Saiba mais</button></a>
         </div>
     </header>
 
-    <section class="pacotes" id="pacotes">
-        
-        <h1 class="pacotes-title">Conheça nossos pacotes!</h1>
-        <div class="cards-pacotes">
-            <div class="large-card">
-                <div class="large-card-tag large-card-tag-top">
-                    <p>Promoção</p>
+    <main>
+        <section class="pacotes" id="pacotes">
+            <h1 class="pacotes-title">Conheça nossos pacotes!</h1>
+            <div class="cards-pacotes">
+                <!-- Exemplo de card-pacote, repita ou gere dinamicamente -->
+                <card-pacote tag="Promoção"
+                    img="https://images.unsplash.com/photo-1514214246283-d427a95c5d2f?auto=format&fit=crop&w=780&q=80"
+                    alt="Miami EUA"
+                    titulo="Pacotes 5 noites em Miami EUA hotel Premium"
+                    beneficio1="Café da manhã incluso"
+                    beneficio2="Wi-Fi"
+                    beneficio3="Pet friendly"
+                    preco="R$ 25600,00 no Pix ou até 10x de R$ 2560,00 no cartão">
+                </card-pacote>
+                <!-- Repita os card-pacote conforme necessário -->
+                <card-pacote tag="Promoção"
+                    img="https://images.unsplash.com/photo-1514214246283-d427a95c5d2f?auto=format&fit=crop&w=780&q=80"
+                    alt="Miami EUA"
+                    titulo="Pacotes 5 noites em Miami EUA hotel Premium"
+                    beneficio1="Café da manhã incluso"
+                    beneficio2="Wi-Fi"
+                    beneficio3="Pet friendly"
+                    preco="R$ 25600,00 no Pix ou até 10x de R$ 2560,00 no cartão">
+                </card-pacote>
+                <card-pacote tag="Promoção"
+                    img="https://images.unsplash.com/photo-1514214246283-d427a95c5d2f?auto=format&fit=crop&w=780&q=80"
+                    alt="Miami EUA"
+                    titulo="Pacotes 5 noites em Miami EUA hotel Premium"
+                    beneficio1="Café da manhã incluso"
+                    beneficio2="Wi-Fi"
+                    beneficio3="Pet friendly"
+                    preco="R$ 25600,00 no Pix ou até 10x de R$ 2560,00 no cartão">
+                </card-pacote>
+                <card-pacote tag="Promoção"
+                    img="https://images.unsplash.com/photo-1514214246283-d427a95c5d2f?auto=format&fit=crop&w=780&q=80"
+                    alt="Miami EUA"
+                    titulo="Pacotes 5 noites em Miami EUA hotel Premium"
+                    beneficio1="Café da manhã incluso"
+                    beneficio2="Wi-Fi"
+                    beneficio3="Pet friendly"
+                    preco="R$ 25600,00 no Pix ou até 10x de R$ 2560,00 no cartão">
+                </card-pacote>
+                <card-pacote tag="Promoção"
+                    img="https://images.unsplash.com/photo-1514214246283-d427a95c5d2f?auto=format&fit=crop&w=780&q=80"
+                    alt="Miami EUA"
+                    titulo="Pacotes 5 noites em Miami EUA hotel Premium"
+                    beneficio1="Café da manhã incluso"
+                    beneficio2="Wi-Fi"
+                    beneficio3="Pet friendly"
+                    preco="R$ 25600,00 no Pix ou até 10x de R$ 2560,00 no cartão">
+                </card-pacote>
+                <card-pacote tag="Promoção"
+                    img="https://images.unsplash.com/photo-1514214246283-d427a95c5d2f?auto=format&fit=crop&w=780&q=80"
+                    alt="Miami EUA"
+                    titulo="Pacotes 5 noites em Miami EUA hotel Premium"
+                    beneficio1="Café da manhã incluso"
+                    beneficio2="Wi-Fi"
+                    beneficio3="Pet friendly"
+                    preco="R$ 25600,00 no Pix ou até 10x de R$ 2560,00 no cartão">
+                </card-pacote>
+                <card-pacote tag="Promoção"
+                    img="https://images.unsplash.com/photo-1514214246283-d427a95c5d2f?auto=format&fit=crop&w=780&q=80"
+                    alt="Miami EUA"
+                    titulo="Pacotes 5 noites em Miami EUA hotel Premium"
+                    beneficio1="Café da manhã incluso"
+                    beneficio2="Wi-Fi"
+                    beneficio3="Pet friendly"
+                    preco="R$ 25600,00 no Pix ou até 10x de R$ 2560,00 no cartão">
+                </card-pacote>
+            </div>
+        </section>
+
+        <article class="servicos" id="servicos">
+            <h1 class="servicos-title">Serviços</h1>
+            <div class="cards-servicos">
+                <div class="card">
+                    <i data-feather="map"></i>
+                    <div class="card-content">
+                        <h3>Tours guiados</h3>
+                        <p>Os tours guiados são passeios realizados com auxílio de um guia, que além de dar informações sobre o local, vai nos conduzir durante o trajeto.</p>
+                    </div>
+                    <a href="tours.html"><button class="btn-saiba-mais">Saiba mais</button></a>
                 </div>
-                <div class="large-card-tag large-card-tag-bottom">
-                    <p>R$ 1500,00</p>
+                <div class="card">
+                    <i data-feather="camera"></i>
+                    <div class="card-content">
+                        <h3>Fotografia profissional</h3>
+                        <p>Nossos fotógrafos estão acostumados a registrar os melhores momentos das viagens para que você aproveite a paisagem sem se preocupar.</p>
+                    </div>
+                    <a href="fototeca.html"><button class="btn-saiba-mais">Saiba mais</button></a>
                 </div>
-                <img class="large-card-image"
-                    src="https://images.unsplash.com/photo-1514214246283-d427a95c5d2f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=780&q=80"
-                    alt="Miami EUA">
-                <div class="large-card-content">
-                    <h2>Pacotes 5 noites em Miami EUA hotel Premium</h2>
-                    <ul>
-                        <li><i data-feather="coffee"></i>Café da manhã incluso</li>
-                        <li><i data-feather="wifi"></i>Wi-Fi</li>
-                        <li><i data-feather="smile"></i>Pet friendly</li>
-                    </ul>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo nesciunt sapiente suscipit
-                        cumque quis maiores sed impedit architecto voluptatem possimus consectetur, numquam unde earum
-                        temporibus, quos corrupti. Maxime, enim distinctio.</p>
+                <div class="card">
+                    <i data-feather="navigation"></i>
+                    <div class="card-content">
+                        <h3>Aluguel de veículo</h3>
+                        <p>Para os clientes que preferem explorar o ambiente sozinhos e curtem a liberdade, oferecemos o serviço de aluguel de veículos com preços super em conta.</p>
+                    </div>
+                    <a href="aluguel.html"><button class="btn-saiba-mais">Saiba mais</button></a>
                 </div>
             </div>
+        </article>
 
-            <div class="card">
-                <div class="card-tag card-tag-top">
-                    <p>Promoção</p>
-                </div>
-                <div class="card-tag card-tag-bottom">
-                    <p>R$ 1890,00</p>
-                </div>
-                <img class="card-image"
-                    src="https://images.unsplash.com/photo-1614722860207-909e0e8dfd99?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80"
-                    alt="Fernando de Noronha BR">
-                <div class="card-content">
-                    <h2>Pacote 3 dias em Fernando de Noronha hotel Premium</h2>
-                    <ul>
-                        <li><i data-feather="coffee"></i>Café da manhã incluso</li>
-                        <li><i data-feather="wifi"></i>Wi-Fi</li>
-                        <li><i data-feather="smile"></i>Pet friendly</li>
-                    </ul>
-                </div>
+        <section class="contatos" id="contatos">
+            <div id="map"></div>
+            <div class="card-contatos">
+                <h1 class="contatos-title">Contatos</h1>
+                <ul>
+                    <li><i data-feather="map-pin"></i> Rua Thomas Gonçalves N15°, Liberdade, Salvador-BA</li>
+                    <li><i data-feather="phone"></i> (71) 3232-2323</li>
+                    <li><i data-feather="instagram"></i> @sa_salles_</li>
+                </ul>
             </div>
-
-            <div class="card">
-                <div class="card-tag card-tag-top">
-                    <p>Promoção</p>
-                </div>
-                <div class="card-tag card-tag-bottom">
-                    <p>R$ 1890,00</p>
-                </div>
-                <img class="card-image"
-                    src="https://images.unsplash.com/photo-1614722860207-909e0e8dfd99?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80"
-                    alt="Fernando de Noronha BR">
-                <div class="card-content">
-                    <h2>Pacote 3 dias em Fernando de Noronha hotel Premium</h2>
-                    <ul>
-                        <li><i data-feather="coffee"></i>Café da manhã incluso</li>
-                        <li><i data-feather="wifi"></i>Wi-Fi</li>
-                        <li><i data-feather="smile"></i>Pet friendly</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-tag card-tag-top">
-                    <p>Promoção</p>
-                </div>
-                <div class="card-tag card-tag-bottom">
-                    <p>R$ 1890,00</p>
-                </div>
-                <img class="card-image"
-                    src="https://images.unsplash.com/photo-1614722860207-909e0e8dfd99?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80"
-                    alt="Fernando de Noronha BR">
-                <div class="card-content">
-                    <h2>Pacote 3 dias em Fernando de Noronha hotel Premium</h2>
-                    <ul>
-                        <li><i data-feather="coffee"></i>Café da manhã incluso</li>
-                        <li><i data-feather="wifi"></i>Wi-Fi</li>
-                        <li><i data-feather="smile"></i>Pet friendly</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-tag card-tag-bottom">
-                    <p>R$ 2000,00</p>
-                </div>
-                <img class="card-image"
-                    src="https://images.unsplash.com/photo-1615633761174-2013785e6950?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
-                    alt="Grécia">
-                <div class="card-content">
-                    <h2>Pacotes 3 dias na Grécia hotel Premium</h2>
-                    <ul>
-                        <li><i data-feather="coffee"></i>Café da manhã incluso</li>
-                        <li><i data-feather="wifi"></i>Wi-Fi</li>
-                        <li><i data-feather="smile"></i>Pet friendly</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-tag card-tag-bottom">
-                    <p>R$ 1890,00</p>
-                </div>
-                <img class="card-image"
-                    src="https://images.unsplash.com/photo-1614722860207-909e0e8dfd99?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80"
-                    alt="Fernando de Noronha BR">
-                <div class="card-content">
-                    <h2>Pacote 3 dias em Fernando de Noronha hotel Premium</h2>
-                    <ul>
-                        <li><i data-feather="coffee"></i>Café da manhã incluso</li>
-                        <li><i data-feather="wifi"></i>Wi-Fi</li>
-                        <li><i data-feather="smile"></i>Pet friendly</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-tag card-tag-bottom">
-                    <p>R$ 1890,00</p>
-                </div>
-                <img class="card-image"
-                    src="https://images.unsplash.com/photo-1614722860207-909e0e8dfd99?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80"
-                    alt="Fernando de Noronha BR">
-                <div class="card-content">
-                    <h2>Pacote 3 dias em Fernando de Noronha hotel Premium</h2>
-                    <ul>
-                        <li><i data-feather="coffee"></i>Café da manhã incluso</li>
-                        <li><i data-feather="wifi"></i>Wi-Fi</li>
-                        <li><i data-feather="smile"></i>Pet friendly</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-tag card-tag-bottom">
-                    <p>R$ 1890,00</p>
-                </div>
-                <img class="card-image"
-                    src="https://images.unsplash.com/photo-1614722860207-909e0e8dfd99?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80"
-                    alt="Fernando de Noronha BR">
-                <div class="card-content">
-                    <h2>Pacote 3 dias em Fernando de Noronha hotel Premium</h2>
-                    <ul>
-                        <li><i data-feather="coffee"></i>Café da manhã incluso</li>
-                        <li><i data-feather="wifi"></i>Wi-Fi</li>
-                        <li><i data-feather="smile"></i>Pet friendly</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-tag card-tag-bottom">
-                    <p>R$ 1890,00</p>
-                </div>
-                <img class="card-image"
-                    src="https://images.unsplash.com/photo-1614722860207-909e0e8dfd99?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80"
-                    alt="Fernando de Noronha BR">
-                <div class="card-content">
-                    <h2>Pacote 3 dias em Fernando de Noronha hotel Premium</h2>
-                    <ul>
-                        <li><i data-feather="coffee"></i>Café da manhã incluso</li>
-                        <li><i data-feather="wifi"></i>Wi-Fi</li>
-                        <li><i data-feather="smile"></i>Pet friendly</li>
-                    </ul>
-                </div>
-            </div>
-
-            <card-pacote tag="Promoção"
-            img="https://images.unsplash.com/photo-1514214246283-d427a95c5d2f?auto=format&fit=crop&w=780&q=80"
-            alt="Miami EUA" titulo="Pacotes 5 noites em Miami EUA hotel Premium" beneficio1="Café da manhã incluso"
-            beneficio2="Wi-Fi" beneficio3="Pet friendly" preco="R$ 1500,00">
-            </card-pacote>
-
-        </div>
-    </section>
-
-    <article class="servicos" id="servicos">
-        <h1 class="servicos-title">Serviços</h1>
-        <div class="cards-servicos">
-
-            <div class="card">
-                <i data-feather="map"></i>
-                <div class="card-content">
-                    <h3>Tours guiados</h3>
-                    <p>Os tours guiados são passeios realizados com auxilio de um guia, que além de dar informações
-                        sobre o local, vai nos conduzir durante o trajeto.</p>
-                </div>
-                <a href="tours.html"><button class="btn-saiba-mais">Saiba mais</button></a>
-            </div>
-
-            <div class="card">
-                <i data-feather="camera"></i>
-                <div class="card-content">
-                    <h3>Fotografia profissional</h3>
-                    <p>Nossos fotógrafos estão acostumados a registrar os melhores momentos das viagens para que você
-                        aproveite a paisagem sem se preocupar.</p>
-                </div>
-                <a href="fototeca.html"><button class="btn-saiba-mais">Saiba mais</button></a>
-            </div>
-
-            <div class="card">
-                <i data-feather="navigation"></i>
-                <div class="card-content">
-                    <h3>Aluguel de veículo</h3>
-                    <p>Para os clientes que preferem explorar o ambiente sozinhos e curtem a liberdade, oferecemos o
-                        serviço de aliguel de veículos com preços super em conta.</p>
-                </div>
-                <a href="aluguel.html"><button class="btn-saiba-mais">Saiba mais</button></a>
-            </div>
-
-        </div>
-    </article>
-
-    <section class="contatos" id="contatos">
-        <div id="map"></div>
-        <div class="card-contatos">
-            <h1 class="contatos-title">Contatos</h1>
-            <ul>
-                <li><i data-feather="map-pin"></i> Rua Thomas Gonçalves N15°, Liberdade, Salvador-BA</li>
-                <li><i data-feather="phone"></i> (71) 3232-2323</li>
-                <li><i data-feather="instagram"></i> @sa_salles_</li>
-            </ul>
-
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer>
         <div class="redes">
@@ -292,21 +169,19 @@
         <div class="sp">
             <p>São Paulo, Brasil</p>
             <p>Rua Coronel Oscar Porto, 250 Paraíso, SP - CEP: 44444-555</p>
-            <P>comercial@salesviagens.com.br</P>
+            <p>comercial@salesviagens.com.br</p>
             <p>+55 (11) 99999-8888</p>
         </div>
         <div class="rj">
-            <p>Rio de janeiro, Brasil</p>
+            <p>Rio de Janeiro, Brasil</p>
             <p>R. Gago Coutinho, 45, Casa 14 Laranjeiras, RJ - CEP: 55555-444</p>
-            <P>comercial@salesviagens.com.br</P>
+            <p>comercial@salesviagens.com.br</p>
             <p>+55 (11) 99888-9999</p>
         </div>
     </footer>
 
-
     <script>
-        feather.replace()
+        feather.replace();
     </script>
 </body>
-
 </html>

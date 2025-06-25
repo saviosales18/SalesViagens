@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+  <symbol id="icon-cafe" viewBox="0 0 48 48">
+    <!-- ...paths do café... -->
+  </symbol>
+  <symbol id="icon-wifi" viewBox="0 0 16 16">
+    <!-- ...paths do wifi... -->
+  </symbol>
+  <symbol id="icon-pet" viewBox="0 0 14 14">
+    <!-- ...paths do pet... -->
+  </symbol>
+</svg>

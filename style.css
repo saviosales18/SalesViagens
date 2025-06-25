@@ -1,7 +1,10 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400;1,500;1,700&display=swap');
 
-* {
+/* RESET & BASE */
+*,
+*::before,
+*::after {
     margin: 0;
     border: 0;
     padding: 0;
@@ -15,105 +18,149 @@
     --Mongo-tengo: #F27F3D;
     --Dark-Salmon: #EF946C;
     --Antique-Brass: #DC9E82;
+    --header-height: 70px;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
 }
 
 body {
-    margin: 0;
     font-family: 'Work Sans', sans-serif;
+    background: #fafbfc;
+    color: #222;
+    min-height: 100vh;
+    line-height: 1.5;
 }
 
-.FixoNoTopo{
+/* HEADER */
+.FixoNoTopo {
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 1002;
 }
 
 header {
-    height: calc(100vh - 200px);
+    min-height: 60vh;
     background: no-repeat center/cover url("img/montfuji.jpg");
-    padding: 0;
-    margin: 0;
+    padding-top: var(--header-height);
+    position: relative;
 }
 
 header nav {
-    width: 100%;
-    height: 60px;
     display: flex;
-    position: fixed;
-    z-index: 99;
     justify-content: space-between;
-
-    backdrop-filter: blur(7px);
+    align-items: center;
+    padding: 18px 5vw;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--header-height);
+    z-index: 1002;
 }
 
-header div {
+header nav > div {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+#logo-img {
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: var(--Mongo-tengo);
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+.menu {
+    display: flex;
+    gap: 18px;
     list-style: none;
+    align-items: center;
+    margin: 0;
+    padding: 0;
 }
 
-header nav #logo-img {
-    width: 40px;
-    height: 40px;
-    position: relative;
-    top: 5px;
-    left: 10px;
-}
-
-header nav .logo {
+.menu .btn-menu {
+    text-decoration: none;
+    color: #222;
     font-weight: 600;
     font-size: 1em;
-    color: black;
-    position: relative;
-    top: -25px;
-    left: 50px;
-}
-
-header nav .menu {
-    list-style: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: background 0.2s, color 0.2s;
     display: flex;
-    max-height: 0;
-    position: relative;
-    top: 20px;
-    font-family: 'Work Sans', sans-serif;
-    font-size: 1.1em;
-    margin: 0 50px 0 0;
+    align-items: center;
 }
 
-header nav .menu .btn-menu:link {
-    text-decoration: none;
-    color: black;
-    transition: all .3s;
+.menu .btn-menu:hover,
+.menu .btn-menu.active {
+    background: var(--Mongo-tengo);
+    color: #fff;
 }
 
-header nav .menu .btn-menu:visited {
-    color: var(--Oxford-Blue);
+.menu i {
+    margin-left: 4px;
 }
 
-header nav .menu .btn-menu:hover {
-    color: white;
-    transform: scale(1.2);
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1003;
+}
+.hamburger span {
+    display: block;
+    height: 4px;
+    width: 28px;
+    background: var(--Mongo-tengo);
+    border-radius: 2px;
+    transition: 0.3s;
+}
+.hamburger.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
 }
 
-header nav .menu .btn-menu:active {
-    color: lightgray;
-    transform: scale(1.1);
-}
-
-header nav .menu .btn-menu li {
-    margin: 0 50px 0 0;
-}
- /* Guia Titulos */
+/* TITLES */
 header .titulos {
-    height: 100%;
-    padding-top: 15%;
+    min-height: 40vh;
+    padding-top: 10vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 header .titulos .titulo {
     font-size: 3em;
     font-style: italic;
     font-weight: 600;
+    text-shadow: 0 3px 8px rgba(0,0,0,0.08);
 }
 header .titulos .btn-saiba-mais {
     margin-top: 20px;
@@ -122,13 +169,13 @@ header .titulos .btn-saiba-mais {
     background: #73261f;
     box-shadow: 0 5px 5px hsla(0, 0%, 0%, 0.2);
     color: white;
-    font-family: 'Work Sans', sans-serif;
     font-size: 1.4em;
     font-weight: 600;
     transition: all .3s;
+    border: none;
 }
 header .titulos .btn-saiba-mais:hover {
-    background-color:white;
+    background-color: white;
     color: black;
     transform: scale(1.05);
     box-shadow: 0 5px 5px hsla(0, 0%, 0%, 0.4);
@@ -140,212 +187,32 @@ header .titulos .btn-saiba-mais:active {
     box-shadow: 0 5px 5px hsla(0, 0%, 0%, 0.2);
 }
 
-/* GUIA DE PACOTES */
+/* PACOTES */
 .pacotes {
-    padding: 15px;
-    background: rgb(255,89,0);
-    background: linear-gradient(250deg, rgb(255, 95, 9) 0%, orange 100%);
+    padding: 2vw 1vw;
+    background-image: linear-gradient(to bottom, rgb(210, 210, 210), rgb(245, 250, 250), rgb(220, 220, 220));
 }
-
-.pacotes .pacotes-title {
+.pacotes-title {
     font-size: 2em;
     width: 100%;
-    margin: 10px 0 0 0;
+    margin: 15px 0 10px 0;
     text-align: center;
     text-shadow: 0 3px 5px hsla(0, 0%, 0%, 0.2);
 }
-
-.pacotes .cards-pacotes {
+.cards-pacotes {
     display: flex;
     margin: 50px auto;
     max-width: 1400px;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 2vw;
 }
 
-.pacotes .large-card {
-    height: 350px;
-    width: 530px;
-    margin: 15px;
-    border-radius: 20px 0px;
-    background-color: white;
-    position: relative;
-    box-shadow: 0 3px 5px hsla(0, 0%, 0%, 0.1);
-    transition: all .5s;
-}
-
-.pacotes .large-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 3px 5px hsla(0, 0%, 0%, 0.4);
-}
-
-.pacotes .large-card-content h2 {
-    font-size: 1em;
-    margin-bottom: 0;
-    margin-top: 15px;
-}
-
-.pacotes .large-card .large-card-tag-top {
-    position: absolute;
-    background-color: var(--Han-Purple);
-    border-radius: 10px 10px 10px 10px;
-    right: 160px;
-    top: 70px;
-    padding: 2px 5px;
-    box-shadow: 0 0 5px hsla(0, 0%, 0%, 0.1);
-}
-
-.pacotes .large-card .large-card-tag-bottom {
-    position: absolute;
-    background-color: var(--Mongo-tengo);
-    border-radius: 10px 10px 10px 10px;
-    right: 145px;
-    bottom: 120px;
-    padding: 5px 10px;
-    box-shadow: 0 0 5px hsla(0, 0%, 0%, 0.1);
-}
-
-.pacotes .large-card .large-card-tag p {
-    margin: 0;
-    color: white;
-    font-weight: 600;
-    font-size: 0.8em;
-}
-
-.pacotes .large-card-image {
-    height: 350px;
-    width: 280px;
-    border-radius: 20px 0 0 0;
-    object-fit: cover;
-}
-
-.pacotes .large-card-content {
-    padding: 0 15px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 250px;
-    height: 340px;
-}
-
-.pacotes .large-card-content ul {
-    position: relative;
-    top: 50px;
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-    padding: 0;
-}
-
-.pacotes .large-card-content ul li{
-    font-size: 0.6em;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    margin: 3px 0;
-    color: gray; 
-}
-
-.pacotes .large-card-content li svg {
-    height: 16px;
-    width: 18px;
-    margin-right: 10px;
-}
-
-
-.pacotes .large-card-content p {
-    font-size: .7em;
-    margin: 120px 0 0 0;
-    text-align: justify;
-    color: gray;
-}
-
-.pacotes .card {
-    height: 350px;
-    width: 250px;
-    margin: 15px;
-    border-radius: 20px 0px;
-    background-color: white;
-    position: relative;
-    box-shadow: 0 3px 5px hsla(0, 0%, 0%, 0.1);
-    transition: all .5s;
-}
-
-.pacotes .card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 3px 5px hsla(0, 0%, 0%, 0.4);
-}
-
-.pacotes .card .card-tag-top {
-    position: absolute;
-    background-color: var(--Han-Purple);
-    border-radius: 10px 0 0 10px;
-    right: 0;
-    top: 15px;
-    padding: 2px 5px;
-    box-shadow: 0 0 5px hsla(0, 0%, 0%, 0.1);
-}
-
-.pacotes .card .card-tag-bottom {
-    position: absolute;
-    background-color: var(--Mongo-tengo);
-    border-radius: 0 10px 10px 0;
-    left: 0;
-    top: 160px;
-    padding: 5px 10px;
-    box-shadow: 0 0 5px hsla(0, 0%, 0%, 0.1);
-}
-
-.pacotes .card .card-tag p {
-    margin: 0;
-    color: white;
-    font-weight: 600;
-    font-size: 0.8em;
-}
-
-.pacotes .card-image {
-    height: 200px;
-    width: 250px;
-    border-radius: 20px 0 0 0;
-    object-fit: cover;
-}
-
-.pacotes .card-content {
-    padding: 0 15px;
-}
-
-.pacotes .card-content ul {
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-    padding: 0;
-}
-
-.pacotes .card-content ul li{
-    font-size: 0.6em;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    margin: 3px 0;
-    color: gray; 
-}
-
-.pacotes .card-content li svg {
-    height: 16px;
-    width: 18px;
-    margin-right: 10px;
-}
-
-.pacotes .card-content h2 {
-    font-size: 1em;
-    margin-bottom: 0;
-}
-
+/* SERVICOS */
 .servicos {
-    padding: 15px;
+    padding: 2vw 1vw;
     background-image: linear-gradient(to bottom, rgb(210, 210, 210), rgb(245, 250, 250), rgb(220, 220, 220));
 }
-
 .servicos .servicos-title {
     font-size: 2em;
     text-align: center;
@@ -353,14 +220,13 @@ header .titulos .btn-saiba-mais:active {
     color: rgb(0, 0, 0);
     text-shadow: 0 3px 5px hsla(0, 0%, 0%, 0.2);
 }
-
 .servicos .cards-servicos {
     display: flex;
     justify-content: space-around;
     margin: 30px auto;
     flex-wrap: wrap;
+    gap: 2vw;
 }
-
 .servicos .card {
     width: 250px;
     display: flex;
@@ -368,8 +234,16 @@ header .titulos .btn-saiba-mais:active {
     justify-content: center;
     align-items: center;
     margin: 0 15px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    padding: 20px 10px;
+    transition: box-shadow .3s, transform .3s;
 }
-
+.servicos .card:hover {
+    box-shadow: 0 5px 15px rgba(48,38,252,0.08);
+    transform: translateY(-4px) scale(1.03);
+}
 .servicos .card svg {
     height: 50px;
     width: 50px;
@@ -377,64 +251,55 @@ header .titulos .btn-saiba-mais:active {
     stroke: rgb(0, 0, 0);
     transition: all .3s;
 }
-
 .servicos .card svg:hover {
     stroke: var(--Han-Purple);
     transform: scale(1.2);
 }
-
 .servicos .card h3 {
     font-weight: 600;
     color: rgb(0, 0, 0);
     margin: 0 0 10px 0;
 }
-
 .servicos .card p {
-    font-size: .8em;
+    font-size: .9em;
     text-align: justify;
     color: rgb(0, 0, 0);
 }
-
 .servicos .card .card-content {
     text-align: center;
     margin: 0 0 20px 0;
 }
-
 .servicos .card .btn-saiba-mais {
     padding: 8px 15px;
     border-radius: 15px;
-    border: 0;
     background: var(--Han-Purple);
     box-shadow: 0 5px 5px hsla(0, 0%, 0%, 0.2);
-    color: rgb(255, 255, 255);
-    font-family: 'Work Sans', sans-serif;
+    color: #fff;
     font-size: 1em;
     font-weight: 600;
     transition: all .3s;
+    border: none;
 }
-
 .servicos .card .btn-saiba-mais:hover {
-    background-color:white;
+    background-color: white;
     color: black;
     transform: scale(1.1);
     box-shadow: 0 5px 5px hsla(0, 0%, 0%, 0.4);
     cursor: pointer;
 }
-
 .servicos .card .btn-saiba-mais:active {
     background: rgb(201, 201, 201);
     transform: scale(1);
     box-shadow: 0 5px 5px hsla(0, 0%, 0%, 0.2);
 }
 
+/* CONTATOS */
 .contatos {
     padding: 100px 20%;
-    background: rgb(0, 0, 0);
     background: linear-gradient(195deg, #3026fc 10%, #120b8f 40%, #030029 80%);
     position: relative;
-    height: 700px;
+    min-height: 500px;
 }
-
 .contatos .card-contatos {
     width: 300px;
     height: 250px;
@@ -442,155 +307,221 @@ header .titulos .btn-saiba-mais:active {
     background-color: white;
     border-radius: 15px;
     z-index: 99;
-    top: calc(50% - 120px);
-    left: calc(25% - 200px);
+    top: 50%;
+    left: 15%;
+    transform: translateY(-50%);
     box-shadow: 0 5px 5px hsla(0, 0%, 0%, 0.2);
+    padding: 20px;
 }
-
 .card-contatos .contatos-title {
     text-align: center;
 }
-
 .card-contatos ul {
-    font-size: .8em;
+    font-size: .9em;
     list-style: none;
+    padding: 0;
 }
-
 .card-contatos ul svg {
-    color: #F27F3D;
+    color: var(--Mongo-tengo);
 }
 
-/* Set the size of the div element that contains the map */
+/* MAP */
 #map {
     margin: 0;
     height: 400px;
     width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
-.footer {
-    height: 600px;
-    padding: 100px 20%;
-    background-image: linear-gradient(to bottom, rgb(210, 210, 210), rgb(245, 250, 250), rgb(220, 220, 220));
-    position: relative;
+/* FOOTER */
+footer {
+    background: #222;
+    color: #fff;
+    padding: 40px 0 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 40px;
+}
+footer .redes {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+footer .redes i {
+    background: #333;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 1.5em;
+    transition: background 0.3s, color 0.3s;
+    color: #fff;
+    cursor: pointer;
+}
+footer .redes i:hover {
+    background: var(--Mongo-tengo);
+    color: #fff;
+}
+footer .sp, footer .rj {
+    min-width: 220px;
+    max-width: 300px;
+}
+footer p {
+    margin: 6px 0;
+    font-size: 1em;
+    color: #ccc;
 }
 
-/*RESPONSIVIDADE*/
+/* RESPONSIVE DESIGN */
 
-/* Landscape phone to portrait tablet */
-@media (max-width: 950px) {
-    
-}
-
-/* Landscape phones and down */
-@media (max-width: 590px) {
-    body {
-        margin-bottom: 55px;
+/* Tablets & down */
+@media (max-width: 1024px) {
+    .contatos {
+        padding: 60px 5vw;
     }
+    .contatos .card-contatos {
+        left: 5vw;
+    }
+    .cards-pacotes, .servicos .cards-servicos {
+        gap: 3vw;
+    }
+}
 
-    /* Guia Menu */
+/* Smartphones */
+@media (max-width: 800px) {
+    html {
+        font-size: 15px;
+    }
     header nav {
+        flex-direction: row;
+        align-items: center;
+        padding: 12px 3vw;
+        height: var(--header-height);
         position: fixed;
-        
     }
-    header nav .menu {
-        list-style: none;
+    .logo, #logo-img {
+        display: block;
+    }
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 100vw;
+        background: #fff;
+        position: absolute;
+        top: var(--header-height);
+        left: 0;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        z-index: 1000;
+    }
+    .menu.open {
         display: flex;
-        max-height: 0;
-        position: relative;
-        top: 20px;
-        font-family: 'Work Sans', sans-serif;
-        font-size: 1.1em;
-        margin: 0 50px 0 0;
     }
-    header nav .logo {
-        display: none;
+    .menu .btn-menu {
+        width: 100%;
+        justify-content: flex-start;
+        border-radius: 0;
+        padding: 14px 5vw;
+        border-bottom: 1px solid #eee;
     }
-    header nav #logo-img {
-        display: none;
+    .menu .btn-menu:last-child {
+        border-bottom: none;
     }
-
-    header .titulos .titulo {
-        font-size: 1.7em;
+    .hamburger {
+        display: flex;
     }
-
-    /* Guia Contatos */
+    .cards-pacotes, .servicos .cards-servicos {
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+    }
+    .servicos .card, .pacotes .large-card {
+        width: 90vw;
+        max-width: 350px;
+    }
     .contatos {
         padding: 60px 0;
     }
     .contatos .card-contatos {
         position: static;
-    }
-
-    /* Guia Serviços */
-    .servicos {
-        padding: 20px;
-    }
-
-    /* Guia Pacotes */
-    .pacotes .large-card {
-        height: 350px;
-        width: 250px;
-        margin: 15px;
-        border-radius: 20px 0px;
-        background-color: white;
-        position: relative;
-        box-shadow: 0 3px 5px hsla(0, 0%, 0%, 0.1);
-        transition: all .5s;
-    }
-    .pacotes .large-card:hover {
-        transform: scale(1.05);
-        box-shadow: 0 3px 5px hsla(0, 0%, 0%, 0.4);
-    }
-    .pacotes .large-card .large-card-tag p {
-        padding: 0;
-        margin: 0;
-        color: white;
-        font-weight: 600;
-        font-size: 0.8em;
-    }
-    .pacotes .large-card .large-card-tag-top {
-        position: absolute;
-        background-color: var(--Han-Purple);
-        border-radius: 10px 0 0 10px;
-        right: 0px;
-        top: 15px;
-        padding: 2px 5px;
-        box-shadow: 0 0 5px hsla(0, 0%, 0%, 0.1);
-    }
-    .pacotes .large-card .large-card-tag-bottom {
-        position: absolute;
-        background-color: var(--Mongo-tengo);
-        border-radius: 0 10px 10px 0;
-        width: max-content;
-        right: 160px;
-        bottom: 165px;
-        padding: 5px 10px;
-        box-shadow: 0 0 5px hsla(0, 0%, 0%, 0.1);
-    }
-    .pacotes .large-card-image {
-        height: 200px;
-        width: 250px;
-        border-radius: 20px 0 0 0;
-        object-fit: cover;
-    }
-    .pacotes .large-card-content {
-        position: relative;
-        padding: 0 15px;
-        height: max-content;
-    }
-    .pacotes .large-card-content h2 {
-        font-size: 1em;
-        margin-bottom: 0;
-        margin: 0;
-    }
-    .pacotes .large-card-content ul {
-        position: relative;
+        transform: none;
+        margin: 0 auto 30px auto;
+        left: 0;
         top: 0;
-        display: flex;
+    }
+    footer {
         flex-direction: column;
-        list-style: none;
-        padding: 0;
+        align-items: center;
+        gap: 20px;
+        text-align: center;
     }
-    .pacotes .large-card-content p {
-        display: none;
+    footer .sp, footer .rj {
+        max-width: 90vw;
     }
+}
+
+/* Small smartphones & smartwatches */
+@media (max-width: 480px) {
+    html {
+        font-size: 13px;
+    }
+    header .titulos .titulo {
+        font-size: 1.3em;
+    }
+    .servicos .card, .pacotes .large-card {
+        width: 98vw;
+        max-width: 98vw;
+        padding: 10px 2vw;
+    }
+    .contatos .card-contatos {
+        width: 95vw;
+        height: auto;
+        min-height: 180px;
+        padding: 10px;
+    }
+    #map {
+        height: 200px;
+    }
+    .hamburger {
+        width: 32px;
+        height: 32px;
+    }
+    .hamburger span {
+        width: 22px;
+        height: 3px;
+    }
+}
+
+/* Smartwatch (very small screens) */
+@media (max-width: 320px) {
+    html {
+        font-size: 10px;
+    }
+    header .titulos .titulo {
+        font-size: 1em;
+    }
+    .servicos .card, .pacotes .large-card, .contatos .card-contatos {
+        width: 99vw;
+        padding: 4px 1vw;
+    }
+    .menu .btn-menu {
+        font-size: 0.9em;
+        padding: 10px 2vw;
+    }
+}
+
+/* Ultra-wide screens */
+@media (min-width: 1800px) {
+    html {
+        font-size: 18px;
+    }
+    .cards-pacotes, .servicos .cards-servicos {
+        max-width: 1800px;
+    }
+    .pacotes, .servicos {
+        padding: 3vw 10vw;
+    }
+    .contatos {
+        padding: 120px 30vw;
+    }
+}
