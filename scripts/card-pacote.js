@@ -38,7 +38,7 @@ class CardPacote extends HTMLElement {
                 display: flex;
                 position: relative;
                 width: 250px;
-                height: 400px;
+                height: 450px;
                 margin: 15px;
                 flex-direction: column;
                 align-items: center;
@@ -49,7 +49,7 @@ class CardPacote extends HTMLElement {
             }
             .card.large-card {
                 width: 500px !important;
-                height: 400px !important;
+                height: 450px !important;
                 border-radius: 20px;
                 flex-direction: row;
                 align-items: stretch;
@@ -125,7 +125,7 @@ class CardPacote extends HTMLElement {
                 .card, .card.large-card {
                     width: 98vw !important;
                     min-width: unset;
-                    max-width: 100vw;
+                    max-width: 90vw;
                     height: auto !important;
                     flex-direction: column !important;
                     align-items: center !important;

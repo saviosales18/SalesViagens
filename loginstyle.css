@@ -10,6 +10,13 @@
 }
 
 :root {
+    /* NEW COLORS */
+    --color1: #efc065;
+    --color2: #e8d875;
+    --color3: #12207d;
+    --color4: #1f6dcc;
+    --color5: #d1dced;
+
     --Oxford-Blue: #030027;
     --Han-Purple: #3026FC;
     --Celest: #C5FFFD;
@@ -33,8 +40,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgb(0, 0, 0);
-    background: linear-gradient(190deg, #3026fc 0%, #120b8f 70%);
+    background: linear-gradient(190deg, var(--color5) 0%, #fff 70%);
 }
 
 .left-login {
@@ -48,7 +54,7 @@ main {
 
 .left-login > h1 {
     font-size: 3vw;
-    color: var(--Mongo-tengo);
+    color: var(--color1);
 }
 
 .left-login-img {
@@ -71,13 +77,13 @@ main {
     justify-content: center;
     align-items: center;
     padding: 30px 35px;
-    background: var(--Han-Purple);
+    background: var(--color2);
     border-radius: 20px;
-    box-shadow: 0px 10px 40px #00000056;
+    box-shadow: 0px 5px 10px #00000056;
 }
 
 .card-login > h1 {
-    color: var(--Celest);
+    color: #fff;
     font-weight: 600;
     margin: 0;
 }
@@ -88,7 +94,7 @@ main {
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    margin: 5px 0;
+    margin: 10px 0 20px 0;
 }
 
 .textfield > input {
@@ -96,21 +102,23 @@ main {
     border: none;
     border-radius: 10px;
     padding: 15px;
-    background:#eefffe;
-    color: black;
+    background: #fff;
+    color: #000;
     font-size: 12pt;
-    box-shadow: 0px 10px 40px #00000056;
     outline: none;
     box-sizing: border-box;
 }
 
 .textfield > label {
-    color: var(--Celest);
+    color: #fff;
+    font-weight: bolder;
+    font-size: 1.1em;
     margin-bottom: 10px;
 }
 
 .textfield > input::placeholder {
     color: #00000070;
+    font-style: italic;
 }
 
 /* BOTÃO LOGIN */
@@ -121,9 +129,9 @@ main {
     border: none;
     margin: 10px;
     outline: none;
-    background: var(--Mongo-tengo);
+    background: var(--color4);
     box-shadow: 0 5px 5px hsla(0, 0%, 0%, 0.2);
-    color: white;
+    color: var(--color5);
     font-family: 'Work Sans', sans-serif;
     font-size: 1.4em;
     font-weight: 600;
@@ -132,18 +140,13 @@ main {
     transition: all .3s;
 }
 
-.btn-login:hover {
-    background-color: var(--Dark-Salmon);
-    color: black;
+.btn-login:hover,
+.btn-login.active {
+    background-color: var(--color3);
+    color: var(--color5);
     transition: 0,3s;
     box-shadow: 0 5px 5px hsla(0, 0%, 0%, 0.4);
     cursor: pointer;
-}
-
-.btn-login:active {
-    background: rgb(201, 201, 201);
-    transform: scale(0.9);
-    box-shadow: 0 5px 5px hsla(0, 0%, 0%, 0.2);
 }
 
 .btn-content {
@@ -160,29 +163,24 @@ main {
     border: none;
     margin: 0 10px 0 0;
     outline: none;
-    background: var(--Mongo-tengo);
+    background: var(--color4);
     box-shadow: 0 5px 5px hsla(0, 0%, 0%, 0.2);
     color: white;
     font-family: 'Work Sans', sans-serif;
-    font-size: 10pt;
+    font-size: 1em;
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 2px;
     transition: all .3s;
 }
 
-.btn-voltar:hover {
-    background-color: var(--Dark-Salmon);
-    color: black;
+.btn-voltar:hover,
+.btn-voltar.active {
+    background-color: var(--color3);
+    color: #fff;
     transition: 0,3s;
     box-shadow: 0 5px 5px hsla(0, 0%, 0%, 0.4);
     cursor: pointer;
-}
-
-.btn-voltar:active {
-    background: rgb(201, 201, 201);
-    transform: scale(0.9);
-    box-shadow: 0 5px 5px hsla(0, 0%, 0%, 0.2);
 }
 
 /* BOTÃO SING IN */
@@ -193,29 +191,24 @@ main {
     border: none;
     margin: 0 0 0 10px;
     outline: none;
-    background: var(--Mongo-tengo);
+    background: var(--color4);
     box-shadow: 0 5px 5px hsla(0, 0%, 0%, 0.2);
     color: white;
     font-family: 'Work Sans', sans-serif;
-    font-size: 10pt;
+    font-size: 1em;
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 2px;
     transition: all .3s;
 }
 
-.btn-sing_in:hover {
-    background-color: var(--Dark-Salmon);
-    color: black;
+.btn-sing_in:hover,
+.btn-sing_in.active {
+    background-color: var(--color3);
+    color: #fff;
     transition: 0,3s;
     box-shadow: 0 5px 5px hsla(0, 0%, 0%, 0.4);
     cursor: pointer;
-}
-
-.btn-sing_in:active {
-    background: rgb(201, 201, 201);
-    transform: scale(0.9);
-    box-shadow: 0 5px 5px hsla(0, 0%, 0%, 0.2);
 }
 
 @media only screen and (max-width: 950px) {
